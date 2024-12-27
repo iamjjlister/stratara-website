@@ -1,16 +1,16 @@
 import React from 'react';
 import './globals.css';
 
+interface RootLayoutProps {
+  children: React.ReactNode;
+}
+
 export const metadata = {
   title: 'STRATARA',
-  description: 'Your life. Managed by STRATARA.',
+  description: 'Modern family office for young professionals',
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
   return (
     <html lang="en">
       <head>
@@ -24,4 +24,6 @@ export default function RootLayout({
       </body>
     </html>
   );
-}
+};
+
+export default RootLayout;

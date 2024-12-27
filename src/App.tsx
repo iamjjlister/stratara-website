@@ -2,7 +2,7 @@ import React from 'react';
 import Header from './components/layout/Header';
 import Hero from './components/sections/Hero';
 
-const App = () => {
+const App: React.FC = () => {
   return (
     <div className="min-h-screen">
       <Header />
