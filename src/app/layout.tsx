@@ -1,16 +1,10 @@
-import './globals.css'
-import { Montserrat } from 'next/font/google'
-
-const montserrat = Montserrat({ 
-  subsets: ['latin'],
-  weight: ['300', '400', '500', '600'],
-  variable: '--font-montserrat',
-})
+import React from 'react';
+import './globals.css';
 
 export const metadata = {
   title: 'STRATARA',
-  description: 'Modern family office for young professionals',
-}
+  description: 'Your life. Managed by STRATARA.',
+};
 
 export default function RootLayout({
   children,
@@ -19,9 +13,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${montserrat.variable} font-montserrat`}>
+      <head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body className="font-montserrat">
         {children}
       </body>
     </html>
-  )
+  );
 }

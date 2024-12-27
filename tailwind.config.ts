@@ -1,10 +1,7 @@
-import type { Config } from 'tailwindcss';
-
-const config: Config = {
+/** @type {import('tailwindcss').Config} */
+module.exports = {
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
@@ -18,8 +15,7 @@ const config: Config = {
         },
       },
       fontFamily: {
-        montserrat: ['var(--font-montserrat)'],
-        chronicle: ['var(--font-chronicle)'],
+        montserrat: ['Montserrat', 'sans-serif'],
       },
       letterSpacing: {
         stratara: '0.2em',
@@ -28,5 +24,3 @@ const config: Config = {
   },
   plugins: [],
 }
-
-export default config;
